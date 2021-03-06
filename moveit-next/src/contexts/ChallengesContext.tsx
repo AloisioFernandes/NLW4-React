@@ -22,14 +22,17 @@ interface ChallengesContextData {
 
 interface ChallengeProviderProps {
   children: ReactNode
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData) // indica formato do objeto para auto complete
 
-export function ChallengesProvider({ children }: ChallengeProviderProps) {
-  const [level, setLevel] = useState(1)
-  const [currentExperience, setCurrentExperience] = useState(0)
-  const [challengesCompleted, setChallengesCompleted] = useState(0)
+export function ChallengesProvider({ children, ...rest }: ChallengeProviderProps) { // as propriedades level, currentExperience e challengesCompleted estão dentro do objeto ...rest
+  const [level, setLevel] = useState(rest.level ?? 1) // se rest.level não existir o valor inicial de level é 1
+  const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0) // se rest.currentExperience não existir o valor inicial de currentExperience é 0
+  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0) // se rest.challengesCompleted não existir o valor inicial de challengesCompleted é 0
 
   const [activeChallenge, setActiveChallenge] = useState(null)
 
@@ -39,8 +42,10 @@ export function ChallengesProvider({ children }: ChallengeProviderProps) {
     Notification.requestPermission() // solicita permissão para enviar notificações ao usuário
   }, [])
 
-  useEffect(() => {
-
+  useEffect(() => { // salva informações do usuário em cookies
+    Cookies.set('level', String(level))
+    Cookies.set('currentExperience', String(currentExperience))
+    Cookies.set('challengesCompleted', String(challengesCompleted))
   }, [level, currentExperience, challengesCompleted])
 
   function levelUp() {

@@ -1,7 +1,7 @@
 # NLW4 - Trilha React - Move it
-Aplicação feita durante o evento Next Level Week 04 da Rocketseat de 22/02/2021 - 28/02/2021. Move it é uma aplicação feita em React com Next.js que utiliza uma técnica semelhante a Pomodoro, em que o usuário inicia um temporizador de 25 minutos e ao final desse tempo o aplicativo envia uma notificação pelo navegador e exibe um desafio para o usuário. 
-Completar desafios adiciona pontos de experiência ao usuário, permitindo que ele suba de nível ao atingir pontos de experiência suficientes. Ao completar ou falhar um desafio, o temporizador retorna para a marcação de 25 min para reiniciar o processo. 
-Os dados de nível, experiência e desafios realizados pelo usuário são salvos no navegador em cookies e carregados através do Next.js.
+<p>Aplicação feita durante o evento Next Level Week 04 da Rocketseat de 22/02/2021 - 28/02/2021. Move it é uma aplicação feita em React com Next.js que utiliza uma técnica semelhante a Pomodoro, em que o usuário inicia um temporizador de 25 minutos e ao final desse tempo o aplicativo envia uma notificação pelo navegador e exibe um desafio para o usuário.</p> 
+<p>Completar desafios adiciona pontos de experiência ao usuário, permitindo que ele suba de nível ao atingir pontos de experiência suficientes. Ao completar ou falhar um desafio, o temporizador retorna para a marcação de 25 min para reiniciar o processo.</p> 
+<p>Os dados de nível, experiência e desafios realizados pelo usuário são salvos no navegador em cookies e carregados através do Next.js.</p>
 
 # Aplicação
 <p align="center">

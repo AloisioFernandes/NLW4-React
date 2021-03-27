@@ -24,7 +24,7 @@
 
     Instalar o NodeJs
     https://nodejs.org/en/
-# Primeiro passo - baixar o projeto
+## Primeiro passo - baixar o projeto
 Faça download do repositório acima ou use o seguinte comando na pasta onde deseja baixar o projeto:
  - git clone https://github.com/AloisioFernandes/NLW4-React.git
 
